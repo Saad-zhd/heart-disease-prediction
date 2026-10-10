@@ -1,6 +1,10 @@
 # ❤️ Heart Disease Prediction System
 ### An End-to-End Machine Learning Diagnostic System
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://heart-disease-prediction-6164.streamlit.app/)
+
+> **Live Application URL:** [https://heart-disease-prediction-6164.streamlit.app/](https://heart-disease-prediction-6164.streamlit.app/)
+
 ---
 
 ## 📌 Project Overview
@@ -36,22 +40,24 @@ Through statistical correlation analysis ($|r|$), mutual information, and clinic
 
 ```text
 heart-disease-prediction/
-├── Heart_Disease_Prediction.ipynb       # Complete executed Jupyter Notebook
-├── heart_disease_model.pkl              # Serialized trained SVC model (.pkl)
-├── svc_trained_model.pkl                # Companion serialized model (.pkl)
-├── processed_cleveland.csv              # Benchmark UCI Cleveland dataset (.csv)
-├── sample-data.csv                      # Formatted 4-attribute dataset (.csv)
-├── sample-data-encoded-output.csv       # Intermediate dataset with encoded target (.csv)
-├── sample-data-encoded.csv              # Fully numeric encoded dataset (.csv)
-├── training-data-encoded.csv            # 80% Training set (.csv)
-├── testing-data-encoded.csv             # 20% Testing set (.csv)
-├── model-predictions.csv                # Model testing predictions and true labels (.csv)
-├── README.md                            # Project overview and documentation
-└── streamlit-app/                       # Cloud Web Application
-    ├── app.py                           # Streamlit web application frontend
-    ├── svc_trained_model.pkl            # Deployed model for web app
-    ├── requirements.txt                 # Streamlit cloud dependencies
-    └── runtime.txt                      # Python runtime definition (3.11)
+├── 1 - Heart Disease Prediction/            # Notebook, Datasets, and Model Artifacts
+│   ├── Heart_Disease_Prediction.ipynb       # Complete executed Jupyter Notebook
+│   ├── heart_disease_model.pkl              # Serialized trained SVC model (.pkl)
+│   ├── svc_trained_model.pkl                # Companion serialized model (.pkl)
+│   ├── processed_cleveland.csv              # Benchmark UCI Cleveland dataset (.csv)
+│   ├── sample-data.csv                      # Formatted 4-attribute dataset (.csv)
+│   ├── sample-data-encoded-output.csv       # Intermediate dataset with encoded target (.csv)
+│   ├── sample-data-encoded.csv              # Fully numeric encoded dataset (.csv)
+│   ├── training-data-encoded.csv            # 80% Training set (.csv)
+│   ├── testing-data-encoded.csv             # 20% Testing set (.csv)
+│   └── model-predictions.csv                # Model testing predictions and true labels (.csv)
+├── streamlit-app/                           # Cloud Web Application
+│   ├── app.py                               # Streamlit web application frontend
+│   ├── svc_trained_model.pkl                # Deployed model for web app
+│   ├── requirements.txt                     # Streamlit cloud dependencies
+│   └── runtime.txt                          # Python runtime definition (3.11)
+├── .gitignore                               # Excludes PDFs, ZIPs, and environments
+└── README.md                                # Project overview and documentation
 ```
 
 ---
@@ -72,6 +78,7 @@ pip install numpy pandas scikit-learn matplotlib seaborn prettytable streamlit
 
 ### 3. Open Jupyter Notebook
 ```powershell
+cd "1 - Heart Disease Prediction"
 jupyter notebook
 ```
 Open `Heart_Disease_Prediction.ipynb` and run all cells (**Kernel -> Restart & Run All**).
@@ -82,25 +89,3 @@ cd streamlit-app
 streamlit run app.py
 ```
 Open **`http://localhost:8501`** in your browser to interact with the web prediction system.
-
----
-
-## ☁️ How to Deploy to Streamlit Cloud
-
-1. Create a repository on your GitHub account (`github.com/new`).
-2. Push your project folder to your repository:
-   ```powershell
-   git init
-   git add .
-   git commit -m "Heart Disease Prediction System"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/heart-disease-prediction.git
-   git push -u origin main
-   ```
-3. Sign in to **[share.streamlit.io](https://share.streamlit.io)** with GitHub.
-4. Click **Create app** -> **Deploy a public app from GitHub**.
-5. Select:
-   - **Repository:** `YOUR_USERNAME/heart-disease-prediction`
-   - **Branch:** `main`
-   - **Main file path:** `streamlit-app/app.py`
-6. Click **Deploy!** Your app will be live on an HTTPS link.
