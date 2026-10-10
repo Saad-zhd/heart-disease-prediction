@@ -1,0 +1,17 @@
+# Ignore Assignment PDFs, Reports, and Submission archives (Privacy)
+*.pdf
+*.html
+*.zip
+Assignment*
+*Report*
+*Submission*
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache & Jupyter checkpoints
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
